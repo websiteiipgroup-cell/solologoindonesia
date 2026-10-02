@@ -235,6 +235,8 @@ collections:
             fields:
               - { label: Teks, name: label, widget: string, pattern: ["^[\\s\\S]{0,20}$", "Maksimal 20 karakter"] }
               - { label: Link, name: link, widget: string }
+          - { label: Judul halaman Produk, name: produk_judul, widget: string, pattern: ["^[\\s\\S]{0,60}$", "Maksimal 60 karakter"] }
+          - { label: Pengantar halaman Produk, name: produk_intro, widget: text, pattern: ["^[\\s\\S]{0,220}$", "Maksimal 220 karakter"] }
           - label: Deskripsi kategori produk
             name: kategori
             widget: list

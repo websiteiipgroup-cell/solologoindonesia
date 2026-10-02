@@ -3,12 +3,13 @@ import { getCollection } from 'astro:content';
 import Base from '../../layouts/Base.astro';
 import ProdukCard from '../../components/ProdukCard.astro';
 import { kategoriInfo } from '../../data/kategori';
+import site from '../../data/site.json';
 const produk = (await getCollection('produk')).sort((a, b) => a.data.nama.localeCompare(b.data.nama));
 ---
 <Base title="Produk" description="Katalog herbisida, insektisida, dan fungisida Solo Logo Indonesia.">
   <section class="page-head"><div class="wrap">
-    <h1>Produk SLI</h1>
-    <p>Selain melayani toll manufacturing, kami memproduksi {produk.length} produk dengan merek sendiri. Pilih kategori untuk langsung melompat.</p>
+    <h1>{site.produk_judul}</h1>
+    <p>{site.produk_intro}</p>
   </div></section>
   <section class="section"><div class="wrap">
     <nav class="kat-nav" aria-label="Kategori produk">
