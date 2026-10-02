@@ -1,0 +1,65 @@
+---
+import '../styles/global.css';
+import site from '../data/site.json';
+
+interface Props { title?: string; description?: string; image?: string; }
+const { title, description = site.deskripsi, image = site.og_image || '/favicon.svg' } = Astro.props;
+const fullTitle = title ? `${title} | Solo Logo Indonesia` : 'Solo Logo Indonesia | Produsen Herbisida, Insektisida, dan Fungisida';
+const path = Astro.url.pathname;
+const nav = site.menu;
+const isCurrent = (href: string) => href === '/' ? path === '/' : path.startsWith(href);
+---
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{fullTitle}</title>
+  <meta name="description" content={description}>
+  <link rel="canonical" href={new URL(path, Astro.site)}>
+  <meta property="og:title" content={fullTitle}>
+  <meta property="og:description" content={description}>
+  <meta property="og:image" content={new URL(image, Astro.site)}>
+  <meta property="og:locale" content="id_ID">
+  <meta property="og:type" content="website">
+  <link rel="icon" href={site.ikon || '/favicon.svg'}>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@700;800&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="header"><div class="wrap">
+    <a href="/" class="brand" aria-label="Solo Logo Indonesia, ke beranda">
+      {site.logo
+        ? <img src={site.logo} alt="Solo Logo Indonesia" style="height:48px;width:auto" />
+        : <><span class="brand-mark">SLI</span><span class="brand-text"><strong>SOLO LOGO</strong><span>INDONESIA</span></span></>}
+    </a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="nav" aria-label="Buka menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+    <nav class="nav" id="nav" aria-label="Menu utama">
+      {nav.map((n) => <a href={n.link} aria-current={isCurrent(n.link) ? "page" : undefined}>{n.label}</a>)}
+      {site.menu_tombol?.label && <a href={site.menu_tombol.link} class="btn btn-hijau">{site.menu_tombol.label}</a>}
+    </nav>
+  </div></header>
+
+  <main><slot /></main>
+
+  <footer class="footer"><div class="wrap">
+    <span>© {new Date().getFullYear()} {site.nama_perusahaan}</span>
+    <span>
+      <a href={site.instagram}>Instagram</a> &nbsp; <a href={site.facebook}>Facebook</a> &nbsp; <a href={site.youtube}>YouTube</a>
+    </span>
+  </div></footer>
+
+  <script>
+    const btn = document.querySelector('.menu-toggle');
+    const nav = document.getElementById('nav');
+    btn?.addEventListener('click', () => {
+      const open = nav?.classList.toggle('open');
+      btn.setAttribute('aria-expanded', String(!!open));
+      btn.setAttribute('aria-label', open ? 'Tutup menu' : 'Buka menu');
+    });
+  </script>
+</body>
+</html>

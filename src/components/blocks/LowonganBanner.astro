@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+const { b } = Astro.props;
+const lowongan = await getCollection('lowongan', (l) => l.data.aktif);
+---
+{lowongan.length > 0 && (
+<section class="section"><div class="wrap">
+  <div class="karier-band">
+    <div>
+      {b.judul_kecil && <p class="small" style="color:#3D3209;font-weight:600">{b.judul_kecil}</p>}
+      <h2>{lowongan.length === 1 ? `${lowongan[0].data.posisi}, ${lowongan[0].data.penempatan}` : `${lowongan.length} posisi terbuka`}</h2>
+    </div>
+    <a href="/karier/" class="btn btn-hijau">Lihat lowongan</a>
+  </div>
+</div></section>
+)}

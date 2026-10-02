@@ -1,0 +1,15 @@
+---
+const { b } = Astro.props;
+const items = (b.items ?? []) as { judul: string; deskripsi: string }[];
+---
+<section class="band"><div class="wrap section">
+  <div class="layanan">
+    <div style="display:flex;flex-direction:column;gap:16px">
+      {b.judul && <h2>{b.judul}</h2>}
+      {b.intro && <p class="muted">{b.intro}</p>}
+    </div>
+    <div class="layanan-list">
+      {items.map((l) => <div><h3>{l.judul}</h3><p>{l.deskripsi}</p></div>)}
+    </div>
+  </div>
+</div></section>

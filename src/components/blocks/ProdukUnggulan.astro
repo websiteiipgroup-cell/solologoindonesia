@@ -1,0 +1,32 @@
+---
+import { getCollection } from 'astro:content';
+import Foto from '../Foto.astro';
+const { b } = Astro.props;
+const unggulan = (await getCollection('produk')).filter((p) => p.data.unggulan);
+---
+{unggulan.length > 0 && (
+<section class="section"><div class="wrap">
+  {b.judul && <div class="section-head"><h2>{b.judul}</h2></div>}
+  {unggulan.map((p) => {
+    const sasaran = p.data.sasaran.split(',').map((s) => s.trim()).filter(Boolean);
+    return (
+      <article class="unggulan">
+        <div class="foto"><Foto src={p.data.gambar} alt={`Kemasan ${p.data.nama}`} label={p.data.nama} /></div>
+        <div class="isi">
+          <div class="tags">
+            {p.data.baru && <span class="tag tag-baru">Produk baru</span>}
+            <span class="tag">{p.data.kategori}</span>
+          </div>
+          <h3 style="font-size:1.9rem">{p.data.nama}</h3>
+          {p.data.ringkasan && <p class="muted clamp-3">{p.data.ringkasan}</p>}
+          <dl class="spek">
+            {p.data.bahan_aktif && <div><dt>Bahan aktif</dt><dd>{p.data.bahan_aktif}</dd></div>}
+            {sasaran.length > 0 && <div><dt>Sasaran</dt><dd class="latin">{sasaran.slice(0, 4).join(', ')}{sasaran.length > 4 ? ', dan lainnya' : ''}</dd></div>}
+          </dl>
+          <a href={`/produk/${p.id}/`}>Lihat detail {p.data.nama}</a>
+        </div>
+      </article>
+    );
+  })}
+</div></section>
+)}

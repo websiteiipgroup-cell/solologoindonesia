@@ -1,0 +1,16 @@
+---
+import site from '../../data/site.json';
+const { b } = Astro.props;
+const link = b.tombol_link === 'whatsapp'
+  ? (site.whatsapp ? `https://wa.me/${site.whatsapp}` : '/kontak/')
+  : (b.tombol_link || '/kontak/');
+---
+<section class="section"><div class="wrap">
+  <div class="ajakan">
+    <div>
+      <h2>{b.judul}</h2>
+      {b.teks && <p class="muted" style="margin-top:8px">{b.teks}</p>}
+    </div>
+    {b.tombol_teks && <a href={link} class="btn btn-hijau">{b.tombol_teks}</a>}
+  </div>
+</div></section>

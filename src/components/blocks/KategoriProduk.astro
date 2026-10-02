@@ -1,0 +1,18 @@
+---
+import { getCollection } from 'astro:content';
+import { kategoriInfo } from '../../data/kategori';
+const { b } = Astro.props;
+const produk = await getCollection('produk');
+---
+<section class="section"><div class="wrap">
+  <div class="section-head">{b.judul && <h2>{b.judul}</h2>}<a href="/produk/">Semua produk</a></div>
+  <div class="grid kat-grid">
+    {Object.entries(kategoriInfo).map(([nama, k]) => (
+      <a class="kat" href={`/produk/#${k.slug}`}>
+        <span class="small">{produk.filter((p) => p.data.kategori === nama).length} produk</span>
+        <h3>{nama}</h3>
+        <p class="clamp-3">{k.desc}</p>
+      </a>
+    ))}
+  </div>
+</div></section>

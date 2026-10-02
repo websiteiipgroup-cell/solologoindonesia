@@ -1,0 +1,5 @@
+---
+interface Props { src?: string; alt: string; label?: string; }
+const { src, alt, label } = Astro.props;
+---
+{src ? <img src={src} alt={alt} loading="lazy" /> : <div class="ph" role="img" aria-label={alt}>{label ?? alt}</div>}

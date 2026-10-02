@@ -1,0 +1,74 @@
+{
+  "nama_perusahaan": "PT Solo Logo Indonesia",
+  "deskripsi": "Jasa toll manufacturing pestisida: formulasi dan pengemasan SL, EC, SC, dan WP di Cikande, Banten.",
+  "whatsapp": "",
+  "whatsapp_karier": "6281290538143",
+  "email": "pt.solologo@gmail.com",
+  "kantor_alamat": "Jl. Sumagung 3 No.22 12, RT.12/RW.19, Klp. Gading Tim., Kec. Klp. Gading, Jkt Utara, Daerah Khusus Ibukota Jakarta 14240",
+  "kantor_telepon": "(021) 2245 9895",
+  "pabrik_alamat": "Jl. Pancatama No. I Kav. VII, Kp. Gembar, RT 004/RW 002, Desa Leuwilimus, Kec. Cikande, Kab. Serang, Banten 42186",
+  "pabrik_telepon": "(0254) 840 8227",
+  "jam_kerja": "Senin–Jumat 08.00–17.00, Sabtu 08.00–14.00",
+  "instagram": "https://www.instagram.com/solologoindonesia",
+  "facebook": "https://www.facebook.com/solologoindonesia",
+  "youtube": "https://www.youtube.com/@SOLOLOGOINDONESIA",
+  "logo": "/images/logo-sli.png",
+  "ikon": "/images/ikon-sli.png",
+  "og_image": "",
+  "kategori": [
+    {
+      "nama": "Herbisida Selektif",
+      "deskripsi": "Mengendalikan gulma tertentu tanpa merusak tanaman utama, misalnya pada padi."
+    },
+    {
+      "nama": "Herbisida Sistemik",
+      "deskripsi": "Diserap dan ditranslokasikan ke seluruh jaringan gulma hingga ke akar."
+    },
+    {
+      "nama": "Herbisida Kontak",
+      "deskripsi": "Bekerja cepat pada bagian gulma yang terkena semprotan."
+    },
+    {
+      "nama": "Herbisida Kontak Sistemik",
+      "deskripsi": "Gabungan efek cepat kontak dengan daya kendali sistemik."
+    },
+    {
+      "nama": "Insektisida",
+      "deskripsi": "Mengendalikan serangga hama yang merusak tanaman."
+    },
+    {
+      "nama": "Fungisida",
+      "deskripsi": "Mengendalikan jamur patogen penyebab penyakit tanaman."
+    }
+  ],
+  "menu": [
+    {
+      "label": "Beranda",
+      "link": "/"
+    },
+    {
+      "label": "Tentang Kami",
+      "link": "/tentang/"
+    },
+    {
+      "label": "Layanan Tolling",
+      "link": "/layanan/"
+    },
+    {
+      "label": "Produk SLI",
+      "link": "/produk/"
+    },
+    {
+      "label": "Berita",
+      "link": "/berita/"
+    },
+    {
+      "label": "Karier",
+      "link": "/karier/"
+    }
+  ],
+  "menu_tombol": {
+    "label": "Hubungi Kami",
+    "link": "/kontak/"
+  }
+}

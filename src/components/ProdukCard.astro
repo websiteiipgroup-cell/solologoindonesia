@@ -1,0 +1,11 @@
+---
+import Foto from './Foto.astro';
+const { p } = Astro.props;
+---
+<a class="produk-card" href={`/produk/${p.id}/`}>
+  <div class="foto"><Foto src={p.data.gambar} alt={`Kemasan ${p.data.nama}`} label={p.data.nama} /></div>
+  <div class="isi">
+    <h3>{p.data.nama}</h3>
+    {p.data.bahan_aktif && <p class="small">{p.data.bahan_aktif}</p>}
+  </div>
+</a>

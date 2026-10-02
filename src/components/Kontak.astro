@@ -1,0 +1,45 @@
+---
+import site from '../data/site.json';
+const { b = {} } = Astro.props;
+---
+<section class="kontak" id="kontak"><div class="wrap">
+  <div class="info">
+    <h2>{b.judul || 'Bicara dengan tim kami'}</h2>
+    <div><strong>Kantor</strong><p>{site.kantor_alamat}<br>{site.kantor_telepon}</p></div>
+    <div><strong>Pabrik</strong><p>{site.pabrik_alamat}<br>{site.pabrik_telepon}</p></div>
+    <div><strong>Jam operasional</strong><p>{site.jam_kerja}</p></div>
+    {site.email && <div><strong>Email</strong><p><a href={`mailto:${site.email}`}>{site.email}</a></p></div>}
+  </div>
+  <form class="form" id="form-kontak" data-wa={site.whatsapp} data-email={site.email}>
+    <h3>Kirim pesan</h3>
+    <div class="row">
+      <div class="field"><label for="f-nama">Nama</label><input id="f-nama" name="nama" required autocomplete="name"></div>
+      <div class="field"><label for="f-kota">Kota / kabupaten</label><input id="f-kota" name="kota" autocomplete="address-level2"></div>
+    </div>
+    <div class="field"><label for="f-perlu">Keperluan</label>
+      <select id="f-perlu" name="perlu">
+        <option>Toll manufacturing (formulasi / pengemasan)</option>
+        <option>Info produk SLI</option>
+        <option>Menjadi distributor</option>
+        <option>Lainnya</option>
+      </select>
+    </div>
+    <div class="field"><label for="f-pesan">Pesan</label><textarea id="f-pesan" name="pesan" required></textarea></div>
+    <button type="submit" class="btn btn-hijau">Kirim lewat WhatsApp</button>
+    <p class="small">Pesan akan terbuka di WhatsApp, tinggal tekan kirim.</p>
+  </form>
+</div></section>
+
+<script>
+  const form = document.getElementById('form-kontak') as HTMLFormElement | null;
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const d = new FormData(form);
+    const text = `Halo Solo Logo Indonesia,\n\nNama: ${d.get('nama')}\nKota: ${d.get('kota') || '-'}\nKeperluan: ${d.get('perlu')}\n\n${d.get('pesan')}`;
+    const wa = form.dataset.wa;
+    const email = form.dataset.email;
+    if (wa) window.open(`https://wa.me/${wa}?text=${encodeURIComponent(text)}`, '_blank');
+    else if (email) location.href = `mailto:${email}?subject=${encodeURIComponent('Pesan dari website')}&body=${encodeURIComponent(text)}`;
+    else alert('Nomor WhatsApp perusahaan belum diisi di Pengaturan.');
+  });
+</script>

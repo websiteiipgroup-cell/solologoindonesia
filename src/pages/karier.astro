@@ -1,0 +1,20 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import site from '../data/site.json';
+const lowongan = await getCollection('lowongan', (l) => l.data.aktif);
+const items = await Promise.all(lowongan.map(async (l) => ({ l, Content: (await render(l)).Content })));
+---
+<Base title="Karier" description="Lowongan kerja di Solo Logo Indonesia.">
+  <section class="page-head"><div class="wrap"><h1>Karier</h1><p>Bergabung dengan tim yang mendampingi petani di seluruh Indonesia.</p></div></section>
+  <section class="section"><div class="wrap" style="display:flex;flex-direction:column;gap:24px">
+    {items.length === 0 && <p class="muted">Saat ini belum ada lowongan terbuka.</p>}
+    {items.map(({ l, Content }) => (
+      <article style="background:#fff;border:1px solid var(--garis);border-radius:16px;padding:32px;display:flex;flex-direction:column;gap:16px">
+        <div><h2>{l.data.posisi}</h2><p class="small" style="margin-top:6px">Penempatan: {l.data.penempatan}</p></div>
+        <div class="prose"><Content /></div>
+        <div><a class="btn btn-hijau" href={`https://wa.me/${site.whatsapp_karier}?text=${encodeURIComponent(`Halo, saya ingin melamar posisi ${l.data.posisi}.`)}`}>Kirim CV via WhatsApp</a></div>
+      </article>
+    ))}
+  </div></section>
+</Base>

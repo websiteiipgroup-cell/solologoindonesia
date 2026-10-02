@@ -1,0 +1,17 @@
+---
+import Foto from '../Foto.astro';
+const { b } = Astro.props;
+---
+<section class="hero"><div class="wrap">
+  <div>
+    <h1>{b.judul}</h1>
+    {b.deskripsi && <p>{b.deskripsi}</p>}
+    {(b.tombol1_teks || b.tombol2_teks) && (
+      <div class="actions">
+        {b.tombol1_teks && <a href={b.tombol1_link || '/'} class="btn btn-kuning">{b.tombol1_teks}</a>}
+        {b.tombol2_teks && <a href={b.tombol2_link || '/'} class="btn btn-garis">{b.tombol2_teks}</a>}
+      </div>
+    )}
+  </div>
+  <div class="hero-img"><Foto src={b.gambar} alt={b.gambar_alt || ''} label="Foto hero belum diunggah" /></div>
+</div></section>

@@ -1,0 +1,10 @@
+---
+const { b } = Astro.props;
+const items = (b.items ?? []) as { angka: string; label: string }[];
+---
+<section class="section"><div class="wrap">
+  {b.judul && <div class="section-head"><h2>{b.judul}</h2></div>}
+  <div class="angka-grid">
+    {items.map((i) => <div class="angka-item"><strong>{i.angka}</strong><span>{i.label}</span></div>)}
+  </div>
+</div></section>

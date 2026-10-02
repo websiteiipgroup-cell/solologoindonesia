@@ -1,0 +1,13 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import Blocks from '../components/blocks/Blocks.astro';
+export async function getStaticPaths() {
+  const pages = await getCollection('halaman');
+  return pages.filter((p) => !['beranda','produk','berita','karier','admin','404'].includes(p.id)).map((p) => ({ params: { slug: p.id }, props: { page: p } }));
+}
+const { page } = Astro.props;
+---
+<Base title={page.data.judul} description={page.data.deskripsi || undefined}>
+  <Blocks blocks={page.data.blocks} />
+</Base>

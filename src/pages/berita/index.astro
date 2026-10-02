@@ -1,0 +1,25 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Foto from '../../components/Foto.astro';
+const berita = (await getCollection('berita', (b) => !b.data.draft))
+  .sort((a, b) => b.data.tanggal.valueOf() - a.data.tanggal.valueOf());
+const fmt = (d: Date) => d.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title="Berita" description="Kabar kegiatan dan produk Solo Logo Indonesia.">
+  <section class="page-head"><div class="wrap"><h1>Berita SLI</h1><p>Kegiatan lapangan, pelatihan petani, dan kabar produk.</p></div></section>
+  <section class="section"><div class="wrap">
+    {berita.length === 0
+      ? <p class="muted">Belum ada berita. Artikel yang diterbitkan dari panel admin akan muncul di sini.</p>
+      : <div class="grid">
+          {berita.map((b) => (
+            <a class="berita-card" href={`/berita/${b.id}/`}>
+              <div class="cover"><Foto src={b.data.cover} alt="" label="Berita SLI" /></div>
+              <span class="small">{fmt(b.data.tanggal)}</span>
+              <h3>{b.data.judul}</h3>
+              {b.data.ringkasan && <p class="muted">{b.data.ringkasan}</p>}
+            </a>
+          ))}
+        </div>}
+  </div></section>
+</Base>

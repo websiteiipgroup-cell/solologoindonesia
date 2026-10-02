@@ -1,0 +1,22 @@
+---
+import { getCollection } from 'astro:content';
+import Foto from '../Foto.astro';
+const { b } = Astro.props;
+const berita = (await getCollection('berita', (x) => !x.data.draft))
+  .sort((a, c) => c.data.tanggal.valueOf() - a.data.tanggal.valueOf()).slice(0, b.jumlah || 3);
+const fmt = (d: Date) => d.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+{berita.length > 0 && (
+<section class="section"><div class="wrap">
+  <div class="section-head">{b.judul && <h2>{b.judul}</h2>}<a href="/berita/">Semua berita</a></div>
+  <div class="grid">
+    {berita.map((x) => (
+      <a class="berita-card" href={`/berita/${x.id}/`}>
+        <div class="cover"><Foto src={x.data.cover} alt="" label="Berita SLI" /></div>
+        <span class="small">{fmt(x.data.tanggal)}</span>
+        <h3 class="clamp-3">{x.data.judul}</h3>
+      </a>
+    ))}
+  </div>
+</div></section>
+)}

@@ -1,0 +1,20 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+export async function getStaticPaths() {
+  const berita = await getCollection('berita', (b) => !b.data.draft);
+  return berita.map((b) => ({ params: { slug: b.id }, props: { b } }));
+}
+const { b } = Astro.props;
+const { Content } = await render(b);
+const fmt = (d: Date) => d.toLocaleDateString('id-ID', { day: 'numeric', month: 'long', year: 'numeric' });
+---
+<Base title={b.data.judul} description={b.data.ringkasan} image={b.data.cover || undefined}>
+  <article class="section"><div class="wrap" style="max-width:780px">
+    <p class="breadcrumb"><a href="/berita/">Berita</a></p>
+    <h1>{b.data.judul}</h1>
+    <p class="small" style="margin:12px 0 32px">{fmt(b.data.tanggal)}</p>
+    {b.data.cover && <img src={b.data.cover} alt="" style="border-radius:14px;margin-bottom:32px" />}
+    <div class="prose"><Content /></div>
+  </div></article>
+</Base>

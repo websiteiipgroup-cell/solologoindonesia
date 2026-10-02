@@ -1,0 +1,52 @@
+---
+import { getCollection, render } from 'astro:content';
+import Base from '../../layouts/Base.astro';
+import Foto from '../../components/Foto.astro';
+import ProdukCard from '../../components/ProdukCard.astro';
+import site from '../../data/site.json';
+import { kategoriInfo } from '../../data/kategori';
+
+export async function getStaticPaths() {
+  const produk = await getCollection('produk');
+  return produk.map((p) => ({ params: { slug: p.id }, props: { p, semua: produk } }));
+}
+const { p, semua } = Astro.props;
+const { Content } = await render(p);
+const k = kategoriInfo[p.data.kategori];
+const terkait = semua.filter((x) => x.data.kategori === p.data.kategori && x.id !== p.id).slice(0, 4);
+const label = p.data.kategori.startsWith('Herbisida') ? 'Gulma sasaran' : p.data.kategori === 'Insektisida' ? 'Hama sasaran' : 'Penyakit sasaran';
+const waText = encodeURIComponent(`Halo, saya ingin tanya tentang ${p.data.nama}.`);
+---
+<Base title={p.data.nama} description={p.data.ringkasan || `${p.data.nama}, ${p.data.kategori.toLowerCase()} dari Solo Logo Indonesia.`} image={p.data.gambar || undefined}>
+  <section class="section"><div class="wrap">
+    <p class="breadcrumb"><a href="/produk/">Produk</a> / <a href={`/produk/#${k.slug}`}>{p.data.kategori}</a></p>
+    <div class="detail">
+      <div class="foto"><Foto src={p.data.gambar} alt={`Kemasan ${p.data.nama}`} label="Foto kemasan belum diunggah" /></div>
+      <div style="display:flex;flex-direction:column;gap:20px">
+        <div class="tags">
+          {p.data.baru && <span class="tag tag-baru">Produk baru</span>}
+          <span class="tag">{p.data.kategori}</span>
+        </div>
+        <h1>{p.data.nama}</h1>
+        <dl class="spek" style="border-top:0;padding-top:0;grid-template-columns:1fr">
+          {p.data.bahan_aktif && <div><dt>Bahan aktif</dt><dd>{p.data.bahan_aktif}</dd></div>}
+          {p.data.sasaran && <div><dt>{label}</dt><dd class="latin">{p.data.sasaran}</dd></div>}
+        </dl>
+        <div class="prose"><Content /></div>
+        <div style="display:flex;flex-wrap:wrap;gap:12px">
+          {site.whatsapp
+            ? <a class="btn btn-hijau" href={`https://wa.me/${site.whatsapp}?text=${waText}`}>Tanya produk ini via WhatsApp</a>
+            : <a class="btn btn-hijau" href="/kontak/">Tanya produk ini</a>}
+        </div>
+      </div>
+    </div>
+  </div></section>
+  {terkait.length > 0 && (
+    <section class="section" style="padding-top:0"><div class="wrap">
+      <div class="section-head"><h2>{p.data.kategori} lainnya</h2></div>
+      <div class="grid" style="grid-template-columns:repeat(auto-fill,minmax(210px,1fr))">
+        {terkait.map((x) => <ProdukCard p={x} />)}
+      </div>
+    </div></section>
+  )}
+</Base>
