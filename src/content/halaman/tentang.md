@@ -45,6 +45,7 @@ blocks:
   - type: galeri
     foto:
       - gambar: /images/uploads/pengemasan-filing.png
+      - gambar: /images/uploads/gambar-hero.png
   - type: teks
     judul: Profil Operasional & Layanan
     isi: >
