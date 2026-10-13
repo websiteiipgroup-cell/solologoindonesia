@@ -10,7 +10,7 @@ const fmt = (d: Date) => d.toLocaleDateString('id-ID', { day: 'numeric', month: 
   <section class="page-head"><div class="wrap"><h1>Berita SLI</h1><p>Kegiatan lapangan, pelatihan petani, dan kabar produk.</p></div></section>
   <section class="section"><div class="wrap">
     {berita.length === 0
-      ? <p class="muted">Belum ada berita. Artikel yang diterbitkan dari panel admin akan muncul di sini.</p>
+      ? <p class="muted">Belum ada berita. Hubungi kami untuk berita terbaru dari SLI.</p>
       : <div class="grid">
           {berita.map((b) => (
             <a class="berita-card" href={`/berita/${b.id}/`}>
