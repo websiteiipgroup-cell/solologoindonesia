@@ -41,6 +41,7 @@ collections:
               - { label: Judul, name: judul, widget: text, pattern: ["^[\\s\\S]{0,90}$", "Maksimal 90 karakter"] }
               - { label: Deskripsi, name: deskripsi, widget: text, required: false, pattern: ["^[\\s\\S]{0,220}$", "Maksimal 220 karakter"] }
               - { label: Foto, name: gambar, widget: image, required: false }
+              - { label: Foto latar (di belakang tulisan), name: latar, widget: image, required: false, hint: "Opsional. Landscape, minimal 1920 x 800. Akan digelapkan otomatis supaya tulisan tetap terbaca." }
               - { label: Teks tombol utama, name: tombol1_teks, widget: string, required: false, pattern: ["^[\\s\\S]{0,30}$", "Maksimal 30 karakter"] }
               - { label: Link tombol utama, name: tombol1_link, widget: string, required: false, hint: "Contoh: /produk/ atau https://wa.me/628xxx" }
               - { label: Teks tombol kedua, name: tombol2_teks, widget: string, required: false, pattern: ["^[\\s\\S]{0,30}$", "Maksimal 30 karakter"] }
