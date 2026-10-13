@@ -16,7 +16,7 @@ blocks:
 
 
       Kami berpengalaman memformulasikan herbisida, insektisida, dan fungisida, dan berusaha memberikan standar mutu terbaik pada setiap produk yang kami kerjakan.
-    gambar: /images/uploads/pengemasan-mixing.png
+    gambar: /images/uploads/pengemasan-mixing-1.png
     posisi_foto: kanan
   - type: teks_foto
     judul: Pengemasan (packing)
