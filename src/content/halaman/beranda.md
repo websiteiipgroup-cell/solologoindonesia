@@ -5,7 +5,7 @@ deskripsi: "Jasa toll manufacturing pestisida: formulasi dan pengemasan SL, EC,
 blocks:
   - gambar: /images/uploads/gambar-hero.png
     judul: Mitra toll manufacturing untuk formulasi dan pengemasan pestisida Anda.
-    latar: /images/uploads/landing-page-bg-dark.png
+    latar: /images/uploads/landing-page-50-.png
     tombol2_teks: Lihat layanan tolling
     tombol1_teks: Konsultasi kebutuhan produksi
     tombol2_link: /layanan/
