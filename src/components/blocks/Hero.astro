@@ -2,7 +2,9 @@
 import Foto from '../Foto.astro';
 const { b } = Astro.props;
 ---
-<section class="hero"><div class="wrap">
+<section class={b.latar ? 'hero hero-latar' : 'hero'}>
+  {b.latar && <img class="hero-bg" src={b.latar} alt="" aria-hidden="true" fetchpriority="high" />}
+  <div class="wrap">
   <div>
     <h1>{b.judul}</h1>
     {b.deskripsi && <p>{b.deskripsi}</p>}
