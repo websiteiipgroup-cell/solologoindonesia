@@ -1,20 +1,11 @@
 {
+  "ikon": "/images/ikon-sli.png",
+  "youtube": "https://www.youtube.com/@SOLOLOGOINDONESIA",
   "nama_perusahaan": "PT Solo Logo Indonesia",
-  "deskripsi": "Jasa toll manufacturing pestisida: formulasi dan pengemasan SL, EC, SC, dan WP di Cikande, Banten.",
-  "whatsapp": "",
-  "whatsapp_karier": "6281290538143",
-  "email": "pt.solologo@gmail.com",
-  "kantor_alamat": "Jl. Sumagung 3 No.22 12, RT.12/RW.19, Klp. Gading Tim., Kec. Klp. Gading, Jkt Utara, Daerah Khusus Ibukota Jakarta 14240",
   "kantor_telepon": "(021) 2245 9895",
   "pabrik_alamat": "Jl. Pancatama No. I Kav. VII, Kp. Gembar, RT 004/RW 002, Desa Leuwilimus, Kec. Cikande, Kab. Serang, Banten 42186",
-  "pabrik_telepon": "(0254) 840 8227",
   "jam_kerja": "Senin–Jumat 08.00–17.00, Sabtu 08.00–14.00",
-  "instagram": "https://www.instagram.com/solologoindonesia",
   "facebook": "https://www.facebook.com/solologoindonesia",
-  "youtube": "https://www.youtube.com/@SOLOLOGOINDONESIA",
-  "logo": "/images/logo-sli.png",
-  "ikon": "/images/ikon-sli.png",
-  "og_image": "",
   "kategori": [
     {
       "nama": "Herbisida Selektif",
@@ -41,6 +32,21 @@
       "deskripsi": "Mengendalikan jamur patogen penyebab penyakit tanaman."
     }
   ],
+  "whatsapp_karier": "6281254610898",
+  "pabrik_telepon": "(0254) 840 8227",
+  "kantor_alamat": "Jl. Sumagung 3 No.22 12, RT.12/RW.19, Klp. Gading Tim., Kec. Klp. Gading, Jkt Utara, Daerah Khusus Ibukota Jakarta 14240",
+  "logo": "/images/logo-sli.png",
+  "menu_tombol": {
+    "label": "Hubungi Kami",
+    "link": "/kontak/"
+  },
+  "whatsapp": "",
+  "instagram": "https://www.instagram.com/solologoindonesia",
+  "og_image": "",
+  "deskripsi": "Jasa toll manufacturing pestisida: formulasi dan pengemasan SL, EC, SC, dan WP di Cikande, Banten.",
+  "produk_intro": "Di samping layanan maklon, kami memiliki rangkaian produk bermerek mandiri yang beragam. Silakan pilih kategori berikut untuk langsung menuju produk yang diinginkan.",
+  "email": "pt.solologo@gmail.com",
+  "produk_judul": "Jelajahi Produk Kami",
   "menu": [
     {
       "label": "Beranda",
@@ -66,11 +72,5 @@
       "label": "Karier",
       "link": "/karier/"
     }
-  ],
-  "menu_tombol": {
-    "label": "Hubungi Kami",
-    "link": "/kontak/"
-  },
-  "produk_judul": "Jelajahi Produk Kami",
-  "produk_intro": "Di samping layanan maklon, kami memiliki rangkaian produk bermerek mandiri yang beragam. Silakan pilih kategori berikut untuk langsung menuju produk yang diinginkan."
+  ]
 }
