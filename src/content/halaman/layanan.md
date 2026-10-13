@@ -16,7 +16,7 @@ blocks:
 
 
       Kami berpengalaman memformulasikan herbisida, insektisida, dan fungisida, dan berusaha memberikan standar mutu terbaik pada setiap produk yang kami kerjakan.
-    gambar: /images/uploads/pengemasan-filing.png
+    gambar: /images/uploads/pengemasan-mixing.png
     posisi_foto: kanan
   - type: teks_foto
     judul: Pengemasan (packing)
@@ -26,7 +26,7 @@ blocks:
 
 
       Tujuan kami sederhana: produk Anda sampai ke pasar dengan nilai yang terjaga dan tepat waktu.
-    gambar: /images/uploads/gambar-hero.png
+    gambar: /images/uploads/pengemasan-filing.png
     posisi_foto: kiri
   - type: layanan
     judul: Formulasi yang kami kerjakan
