@@ -19,3 +19,5 @@ Herbisida sistemik purna tumbuh berbentuk larutan berwarna kuning kecoklatan unt
 **Gulma berdaun sempit :** Ottochloa nodosa, Axonopus, Paspalum conjugatum
 
 **Konsentrasi :** 2 - 4 L/ha volume semprot 500 - 1000 L/ha
+
+![](/images/uploads/untitled-2.png)
