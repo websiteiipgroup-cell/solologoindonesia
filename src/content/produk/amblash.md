@@ -10,6 +10,4 @@ baru: false
 ---
 Herbisida sistemik purna tumbuh berbentuk larutan berwarna kuning kecoklatan untuk mengendalikan gulma berdaun lebar, berdaun sempit, dan teki
 
-
-
 ![](/images/uploads/untitled-2.png)
