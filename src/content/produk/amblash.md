@@ -10,14 +10,6 @@ baru: false
 ---
 Herbisida sistemik purna tumbuh berbentuk larutan berwarna kuning kecoklatan untuk mengendalikan gulma berdaun lebar, berdaun sempit, dan teki
 
-**Tanaman :** Kelapa sawit, karet, teh, lahan tanpa tanaman
 
-**Lahan tanpa tanaman :** Imperata cylindrica.
-
-**Gulma berdaun lebar :** Ageratum conyzoides, Borreria sp., Mikania micrantha, Asystasia intrusa
-
-**Gulma berdaun sempit :** Ottochloa nodosa, Axonopus, Paspalum conjugatum
-
-**Konsentrasi :** 2 - 4 L/ha volume semprot 500 - 1000 L/ha
 
 ![](/images/uploads/untitled-2.png)
