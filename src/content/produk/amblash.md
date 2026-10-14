@@ -1,5 +1,5 @@
 ---
-nama: Amblash
+nama: Amblash 510 SL
 kategori: Herbisida Sistemik
 bahan_aktif: Isopropil Amina Glifosat 510 g/L (setara dengan glifosat 378 g/L)
 sasaran: ""
