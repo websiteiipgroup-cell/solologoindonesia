@@ -2,12 +2,12 @@
 nama: Tufordi 865 SL
 kategori: Herbisida Selektif
 bahan_aktif: Dimetil amina 865 g/l (setara 2,4-D 720 g/l)
-sasaran: Ludwigia octovalvis (cacabean), Ageratum conyzoides (bandotan),
-  Monochoria vaginalis (eceng), Chromolaena odorata (kirinyuh)
-ringkasan: Herbisida selektif purna tumbuh untuk gulma berdaun lebar.
+sasaran: Chromolaena odorata, Clidermia hirta, Borreria alata, Mikania
+  micrantha, Melastoma malabathricum, Ageratum conyzoides, Portulaca, Monochoria
+  vaginalis, Asystasia sp.
+ringkasan: ""
 gambar: /images/uploads/tufordi-865-sl.png
 unggulan: true
 baru: false
 ---
-
-Herbisida selektif purna tumbuh, larutan berwarna cokelat muda, efektif mengendalikan gulma berdaun lebar pada tanaman padi, karet, teh, dan tebu.
+Herbisida purna tumbuh sistemik non selektif, efektif mengendalikan berbagai gulma berdaun lebar pada berbagai tanaman
