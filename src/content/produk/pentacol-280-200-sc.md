@@ -1,10 +1,14 @@
 ---
-nama: "Pentacol 280/200 SC"
-kategori: "Herbisida Kontak Sistemik"
-bahan_aktif: "Parakuat diklorida 280 g/l + Diuron 200 g/l"
-sasaran: "Mikania micrantha, Asystasia intrusa, Borreria sp., Ageratum conyzoides, Syngonium podophyllum, Eleusine indica, Paspalum conjugatum, Digitaria sp., Cynodon compressus, Cyperus sp., Nephrolepis sp., Stenochlaena palustris, Imperata cylindrica"
-ringkasan: "Herbisida kontak dan sistemik purna tumbuh untuk gulma berdaun lebar, berdaun sempit, dan teki."
-gambar: ""
+nama: Pentacol 280/200 SC
+kategori: Herbisida Kontak Sistemik
+bahan_aktif: Parakuat diklorida 280 g/l + Diuron 200 g/l
+sasaran: Mikania micrantha, Asystasia intrusa, Borreria sp., Ageratum
+  conyzoides, Syngonium podophyllum, Eleusine indica, Paspalum conjugatum,
+  Digitaria sp., Cynodon compressus, Cyperus sp., Nephrolepis sp., Stenochlaena
+  palustris, Imperata cylindrica
+ringkasan: Herbisida kontak dan sistemik purna tumbuh untuk gulma berdaun lebar,
+  berdaun sempit, dan teki.
+gambar: /images/uploads/pentacol-276-200sl.png
 unggulan: true
 baru: true
 ---
