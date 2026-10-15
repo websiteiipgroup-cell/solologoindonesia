@@ -1,12 +1,10 @@
 ---
-nama: "Clopastrin"
-kategori: "Insektisida"
+nama: Clopastrin
+kategori: Insektisida
 bahan_aktif: ""
 sasaran: ""
 ringkasan: ""
-gambar: ""
+gambar: /images/uploads/clopastrin-100-520ec.png
 unggulan: false
 baru: false
 ---
-
-
