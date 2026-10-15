@@ -1,12 +1,10 @@
 ---
-nama: "StandUp"
-kategori: "Herbisida Sistemik"
+nama: StandUp
+kategori: Herbisida Sistemik
 bahan_aktif: ""
 sasaran: ""
 ringkasan: ""
-gambar: ""
+gambar: /images/uploads/standup-240sl.png
 unggulan: false
 baru: false
 ---
-
-
