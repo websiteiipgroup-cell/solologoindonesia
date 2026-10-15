@@ -1,12 +1,10 @@
 ---
-nama: "Hemat"
-kategori: "Herbisida Sistemik"
+nama: Hemat
+kategori: Herbisida Sistemik
 bahan_aktif: ""
 sasaran: ""
 ringkasan: ""
-gambar: ""
+gambar: /images/uploads/hemat-555sl.png
 unggulan: false
 baru: false
 ---
-
-
