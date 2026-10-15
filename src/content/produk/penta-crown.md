@@ -1,12 +1,10 @@
 ---
-nama: "Penta Crown"
-kategori: "Herbisida Kontak"
+nama: Penta Crown
+kategori: Herbisida Kontak
 bahan_aktif: ""
 sasaran: ""
 ringkasan: ""
-gambar: ""
+gambar: /images/uploads/pentacrown-135sl.png
 unggulan: false
 baru: false
 ---
-
-
