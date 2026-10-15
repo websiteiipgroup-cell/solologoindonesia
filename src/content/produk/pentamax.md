@@ -1,12 +1,10 @@
 ---
-nama: "Pentamax"
-kategori: "Herbisida Kontak"
+nama: Pentamax
+kategori: Herbisida Kontak
 bahan_aktif: ""
 sasaran: ""
 ringkasan: ""
-gambar: ""
+gambar: /images/uploads/pentamax-276sl.png
 unggulan: false
 baru: false
 ---
-
-
