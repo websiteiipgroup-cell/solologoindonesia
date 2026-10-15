@@ -1,12 +1,10 @@
 ---
-nama: "SatyaMax"
-kategori: "Herbisida Sistemik"
+nama: SatyaMax
+kategori: Herbisida Sistemik
 bahan_aktif: ""
 sasaran: ""
 ringkasan: ""
-gambar: ""
+gambar: /images/uploads/satyamax-276sl.png
 unggulan: false
 baru: false
 ---
-
-
