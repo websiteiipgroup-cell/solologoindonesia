@@ -1,12 +1,10 @@
 ---
-nama: "Sagriquat"
-kategori: "Herbisida Kontak"
+nama: Sagriquat
+kategori: Herbisida Kontak
 bahan_aktif: ""
 sasaran: ""
 ringkasan: ""
-gambar: ""
+gambar: /images/uploads/sagriquat-276sl.png
 unggulan: false
 baru: false
 ---
-
-
