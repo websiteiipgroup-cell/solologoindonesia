@@ -1,12 +1,10 @@
 ---
-nama: "Sahara"
-kategori: "Herbisida Sistemik"
+nama: Sahara
+kategori: Herbisida Sistemik
 bahan_aktif: ""
 sasaran: ""
 ringkasan: ""
-gambar: ""
+gambar: /images/uploads/sahara-500sl.png
 unggulan: false
 baru: false
 ---
-
-
