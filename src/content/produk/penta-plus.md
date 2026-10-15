@@ -1,12 +1,10 @@
 ---
-nama: "Penta Plus"
-kategori: "Herbisida Kontak"
+nama: Penta Plus
+kategori: Herbisida Kontak
 bahan_aktif: ""
 sasaran: ""
 ringkasan: ""
-gambar: ""
+gambar: /images/uploads/pentaplus-276sl.png
 unggulan: false
 baru: false
 ---
-
-
