@@ -1,12 +1,10 @@
 ---
-nama: "Bassnil"
-kategori: "Fungisida"
+nama: Manmop
+kategori: Fungisida
 bahan_aktif: ""
 sasaran: ""
 ringkasan: ""
-gambar: ""
+gambar: /images/uploads/manmop-9-60wp.png
 unggulan: false
 baru: false
 ---
-
-
