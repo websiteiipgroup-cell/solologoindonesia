@@ -4,7 +4,7 @@ kategori: Herbisida Sistemik
 bahan_aktif: Isopropil Amina Glifosat 510 g/L (setara dengan glifosat 378 g/L)
 sasaran: ""
 ringkasan: ""
-gambar: /images/uploads/amblash.png
+gambar: /images/uploads/amblash-510sl.png
 unggulan: false
 baru: false
 ---
