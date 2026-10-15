@@ -1,5 +1,5 @@
 {
-  "ikon": "/images/ikon-sli.png",
+  "ikon": "/images/uploads/logogram.png",
   "youtube": "https://www.youtube.com/@SOLOLOGOINDONESIA",
   "nama_perusahaan": "PT Solo Logo Indonesia",
   "kantor_telepon": "(021) 2245 9895",
@@ -35,14 +35,14 @@
   "whatsapp_karier": "6281254610898",
   "pabrik_telepon": "(0254) 840 8227",
   "kantor_alamat": "Jl. Sumagung 3 No.22 12, RT.12/RW.19, Klp. Gading Tim., Kec. Klp. Gading, Jkt Utara, Daerah Khusus Ibukota Jakarta 14240",
-  "logo": "/images/logo-sli.png",
+  "logo": "/images/uploads/logo-ful.png",
   "menu_tombol": {
     "label": "Hubungi Kami",
     "link": "/kontak/"
   },
   "whatsapp": "6281254610898",
   "instagram": "https://www.instagram.com/solologoindonesia",
-  "og_image": "",
+  "og_image": "/images/uploads/gambar-share-link.png",
   "deskripsi": "Jasa toll manufacturing pestisida: formulasi dan pengemasan SL, EC, SC, dan WP di Cikande, Banten.",
   "produk_intro": "Di samping layanan maklon, kami memiliki rangkaian produk bermerek mandiri yang beragam. Silakan pilih kategori berikut untuk langsung menuju produk yang diinginkan.",
   "email": "pt.solologo@gmail.com",
