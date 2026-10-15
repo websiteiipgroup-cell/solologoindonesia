@@ -1,12 +1,10 @@
 ---
-nama: "Badra"
-kategori: "Herbisida Kontak"
+nama: Badra
+kategori: Herbisida Kontak
 bahan_aktif: ""
 sasaran: ""
 ringkasan: ""
-gambar: ""
+gambar: /images/uploads/badra-276sl.png
 unggulan: false
 baru: false
 ---
-
-
