@@ -6,7 +6,7 @@ sasaran: Chromolaena odorata, Clidermia hirta, Borreria alata, Mikania
   micrantha, Melastoma malabathricum, Ageratum conyzoides, Portulaca, Monochoria
   vaginalis, Asystasia sp.
 ringkasan: ""
-gambar: /images/uploads/tufordi.png
+gambar: /images/uploads/tufordi-865sl.png
 unggulan: true
 baru: false
 ---
