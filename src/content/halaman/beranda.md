@@ -21,7 +21,7 @@ blocks:
         label: Luas pabrik di Cikande
       - angka: 6.000+ MT
         label: Kapasitas produksi per tahun
-      - angka: "153"
+      - angka: "> 150"
         label: Tenaga kerja
       - angka: Sejak 2017
         label: Melayani toll manufacturing
