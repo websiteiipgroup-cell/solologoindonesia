@@ -47,7 +47,7 @@ blocks:
         label: Luas pabrik
       - angka: 6.000+ MT
         label: Kapasitas produksi per tahun
-      - angka: "153"
+      - angka: ">150"
         label: Tenaga kerja
   - type: kontak
     judul: Diskusikan kebutuhan produksi Anda
